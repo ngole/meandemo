@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <form action="/user/update/<%= user.id %>" method="POST" class="form-signin">
+                <h2>Editing a user <%= user.name %></h2>
+                <div class="form-group">
+                    <label class="control-label">Name</label>
+                    <input value="<%= user.name %>" name="name" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Email</label>
+                    <input value="<%= user.email %>" name="email" type="text" class="form-control" />
+                </div>
+                <input type="submit" value="Save" class="btn btn-lg btn-primary btn-block" />
+                <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
